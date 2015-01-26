@@ -1,0 +1,73 @@
+---
+name: Deploy to Crashlytics
+description: |
+  Bitrise Step to Deploy an Xcode archive to Crashlytics.
+  Required: an Xcode Archive Step should run before this Step!
+  
+  This Step requires a Crashlytics account.
+website: https://github.com/maciekish/bitrise-crashlytics-upload
+fork_url: https://github.com/maciekish/bitrise-crashlytics-upload
+source:
+  git: git@github.com:maciekish/bitrise-crashlytics-upload.git
+host_os_tags:
+  - osx-10.9
+  - osx-10.10
+project_type_tags:
+  - ios
+type_tags:
+  - deploy
+  - crashlytics
+is_requires_admin_user: true
+inputs:
+  -
+    title: "BITRISE Archive Step's IPA path output (passed automatically on Bitrise)"
+    mapped_to: BITRISE_IPA_PATH
+    is_expand: true
+    is_required: true
+    value: "$BITRISE_IPA_PATH"
+  -
+    title: "BITRISE's App-Slug variable (passed automatically on Bitrise)"
+    mapped_to: BITRISE_APP_SLUG
+    is_expand: true
+    is_required: true
+    value: "$BITRISE_APP_SLUG"
+  -
+    title: "BITRISE's Build-Slug variable (passed automatically on Bitrise)"
+    mapped_to: BITRISE_BUILD_SLUG
+    is_expand: true
+    is_required: true
+    value: "$BITRISE_BUILD_SLUG"
+  - 
+    title: "Crashlytics.framework submit Path"
+    description: "Example: /AppName/Crashlytics.framework/submit"
+    mapped_to: CRASHLYTICS_PATH
+    is_expand: true
+    is_required: true
+  - 
+    title: "Crashlytics API_KEY"
+    mapped_to: CRASHLYTICS_API_KEY
+    is_expand: true
+    is_required: true
+  - 
+    title: "Crashlytics BUILD_SECRET"
+    mapped_to: CRASHLYTICS_BUILD_SECRET
+    is_expand: true
+    is_required: true
+  -
+    title: "Crashlytics Emails"
+    description: "A comma separated list of email addresses"
+    mapped_to: CRASHLYTICS_EMAILS
+    is_expand: true
+    is_required: true
+  -
+    title: "Crashlytics Group Aliases"
+    mapped_to: CRASHLYTICS_GROUP_ALIASES
+    is_expand: true
+    is_required: true
+  -
+    title: "Crashlytics Notifications"
+    description: "YES|NO"
+    mapped_to: CRASHLYTICS_NOTIFICATIONS
+    is_expand: true
+    is_required: true
+outputs:
