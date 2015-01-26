@@ -8,7 +8,7 @@ description: |
 website: https://github.com/maciekish/bitrise-crashlytics-upload
 fork_url: https://github.com/maciekish/bitrise-crashlytics-upload
 source:
-  git: git@github.com:maciekish/bitrise-crashlytics-upload.git
+  git: https://github.com/maciekish/bitrise-crashlytics-upload.git
 host_os_tags:
   - osx-10.9
   - osx-10.10
@@ -39,7 +39,7 @@ inputs:
     value: "$BITRISE_BUILD_SLUG"
   - 
     title: "Crashlytics.framework submit Path"
-    description: "Example: /AppName/Crashlytics.framework/submit"
+    description: "Example: AppName/Crashlytics.framework/submit Don't add quotes"
     mapped_to: CRASHLYTICS_PATH
     is_expand: true
     is_required: true
