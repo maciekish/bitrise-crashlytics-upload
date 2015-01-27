@@ -20,12 +20,6 @@ type_tags:
 is_requires_admin_user: true
 inputs:
   - 
-    title: "Crashlytics.framework submit Path"
-    description: "Don't add quotes. Example: Crashlytics.framework/submit"
-    mapped_to: CRASHLYTICS_PATH
-    is_expand: false
-    is_required: true
-  - 
     title: "Crashlytics API_KEY"
     mapped_to: CRASHLYTICS_API_KEY
     is_expand: false
@@ -53,4 +47,10 @@ inputs:
     mapped_to: CRASHLYTICS_NOTIFICATIONS
     is_expand: false
     is_required: true
+  -
+    title: "Custom Crashlytics.framework submit path"
+    description: "This stel will attempt to find 'Crashlytics.framework/submit' automatically. You can specify the path relative to the git root manually if you want. Don't add quotes. Example: Crashlytics.framework/submit"
+    mapped_to: CRASHLYTICS_PATH
+    is_expand: false
+    is_required: false
 outputs:
