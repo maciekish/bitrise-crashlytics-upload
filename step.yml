@@ -19,30 +19,6 @@ type_tags:
   - crashlytics
 is_requires_admin_user: true
 inputs:
-  -
-    title: "BITRISE Source Dir (passed automatically on Bitrise)"
-    mapped_to: BITRISE_SOURCE_DIR
-    is_expand: true
-    is_required: true
-    value: "$BITRISE_SOURCE_DIR"
-  -
-    title: "BITRISE Archive Step's IPA path output (passed automatically on Bitrise)"
-    mapped_to: BITRISE_IPA_PATH
-    is_expand: true
-    is_required: true
-    value: "$BITRISE_IPA_PATH"
-  -
-    title: "BITRISE's App-Slug variable (passed automatically on Bitrise)"
-    mapped_to: BITRISE_APP_SLUG
-    is_expand: true
-    is_required: true
-    value: "$BITRISE_APP_SLUG"
-  -
-    title: "BITRISE's Build-Slug variable (passed automatically on Bitrise)"
-    mapped_to: BITRISE_BUILD_SLUG
-    is_expand: true
-    is_required: true
-    value: "$BITRISE_BUILD_SLUG"
   - 
     title: "Crashlytics.framework submit Path"
     description: "Example: AppName/Crashlytics.framework/submit Don't add quotes"
