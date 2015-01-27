@@ -21,35 +21,36 @@ is_requires_admin_user: true
 inputs:
   - 
     title: "Crashlytics.framework submit Path"
-    description: "Example: AppName/Crashlytics.framework/submit Don't add quotes"
+    description: "Don't add quotes. Example: Crashlytics.framework/submit"
     mapped_to: CRASHLYTICS_PATH
-    is_expand: true
+    is_expand: false
     is_required: true
   - 
     title: "Crashlytics API_KEY"
     mapped_to: CRASHLYTICS_API_KEY
-    is_expand: true
+    is_expand: false
     is_required: true
   - 
     title: "Crashlytics BUILD_SECRET"
     mapped_to: CRASHLYTICS_BUILD_SECRET
-    is_expand: true
+    is_expand: false
     is_required: true
   -
     title: "Crashlytics Emails"
     description: "A comma separated list of email addresses"
     mapped_to: CRASHLYTICS_EMAILS
-    is_expand: true
+    is_expand: false
     is_required: true
   -
     title: "Crashlytics Group Aliases"
+    description: "A comma separated list of group aliases"
     mapped_to: CRASHLYTICS_GROUP_ALIASES
-    is_expand: true
+    is_expand: false
     is_required: true
   -
     title: "Crashlytics Notifications"
     description: "YES|NO"
     mapped_to: CRASHLYTICS_NOTIFICATIONS
-    is_expand: true
+    is_expand: false
     is_required: true
 outputs:
