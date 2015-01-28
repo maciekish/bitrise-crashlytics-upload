@@ -3,8 +3,10 @@
 #Go to the project folder
 eval cd "$BITRISE_SOURCE_DIR"
 
+CRASHLYTICS_PATH="$BITRISE_SOURCE_DIR/$CRASHLYTICS_PATH"
+
 #Check if provided path exists
-if [ ! -f "$BITRISE_SOURCE_DIR/$CRASHLYTICS_PATH" ]; then
+if [ ! -f "$CRASHLYTICS_PATH" ]; then
     CRASHLYTICS_PATH=`find . | grep -i crashlytics.framework/submit | head -1`
 fi
 
